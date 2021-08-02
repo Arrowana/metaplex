@@ -11,6 +11,7 @@ import {
   Data,
   Creator,
   findProgramAddress,
+  Attribute,
 } from '@oyster/common';
 import React from 'react';
 import { MintLayout, Token } from '@solana/spl-token';
@@ -49,6 +50,7 @@ export const mintNFT = async (
     description: string;
     image: string | undefined;
     animation_url: string | undefined;
+    attributes: Attribute[] | undefined
     external_url: string;
     properties: any;
     creators: Creator[] | null;
@@ -69,6 +71,7 @@ export const mintNFT = async (
     seller_fee_basis_points: metadata.sellerFeeBasisPoints,
     image: metadata.image,
     animation_url: metadata.animation_url,
+    attributes: metadata.attributes,
     external_url: metadata.external_url,
     properties: {
       ...metadata.properties,
