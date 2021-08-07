@@ -61,6 +61,8 @@ export type MetadataFile = {
 
 export type FileOrString = MetadataFile | string;
 
+export type Attribute = {trait_type: string, display_type?: string, value: string | number};
+
 export interface IMetadataExtension {
   name: string;
   symbol: string;
@@ -70,6 +72,8 @@ export interface IMetadataExtension {
   // preview image absolute URI
   image: string;
   animation_url?: string;
+
+  attributes?: Attribute[]
 
   // stores link to item on meta
   external_url: string;
