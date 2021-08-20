@@ -495,7 +495,7 @@ export function Notifications() {
       content={content}
       trigger="click"
     >
-      <h1 className="title">M</h1>
+      <img src="ram-logo.png" style={{width: '40px', marginRight: '10px'}}></img>
     </Popover>
   );
 
