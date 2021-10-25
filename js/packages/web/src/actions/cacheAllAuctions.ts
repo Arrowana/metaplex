@@ -72,7 +72,7 @@ export async function cacheAllAuctions(
     'auctions to cache.',
   );
   console.log('auctionManagersToCache:', auctionManagersToCache);
-
+  let storeIndex = tempCache.storeIndexer;
   for (let i = 0; i < auctionManagersToCache.length; i++) {
     const auctionManager = auctionManagersToCache[i];
     const boxes: ParsedAccount<SafetyDepositBox>[] = buildListWhileNonZero(
